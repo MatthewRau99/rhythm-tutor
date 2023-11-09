@@ -1,0 +1,176 @@
+{
+    "problems": [
+        {
+            "rhythm": [
+                {"length": 1, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 1, "rest": true},
+                {"length": 1, "rest": false}
+            ],
+            "counts": 4,
+            "meter": "simple",
+            "bpm": 120,
+            "picture": "p1.png"
+        },
+        {
+            "rhythm": [
+                {"length": 1, "rest": false},
+                {"length": 1, "rest": true},
+                {"length": 1, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 1, "rest": true},
+                {"length": 1, "rest": false},
+                {"length": 2, "rest": false}
+            ],
+            "counts": 8,
+            "meter": "simple",
+            "bpm": 120,
+            "picture": "p2.png"
+        },
+        {
+            "rhythm": [
+                {"length": 1, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 1, "rest": false}
+            ],
+            "counts": 4,
+            "meter": "simple",
+            "bpm": 120,
+            "picture": "p3.png"
+        },
+        {
+            "rhythm": [
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 0.5, "rest": true},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": false}
+            ],
+            "counts": 4,
+            "meter": "simple",
+            "bpm": 120,
+            "picture": "p4.png"
+        },
+        {
+            "rhythm": [
+                {"length": 1, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": true},
+                {"length": 1, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 2, "rest": false}
+            ],
+            "counts": 8,
+            "meter": "simple",
+            "bpm": 120,
+            "picture": "p5.png"
+        },
+        {
+            "rhythm": [
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": true},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": true},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": false}
+            ],
+            "counts": 4,
+            "meter": "simple",
+            "bpm": 120,
+            "picture": "p6.png"
+        },
+        {
+            "rhythm": [
+                {"length": 1, "rest": false},
+                {"length": 0.5, "rest": true},
+                {"length": 0.5, "rest": false},
+                {"length": 2, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 2, "rest": false}
+            ],
+            "counts": 8,
+            "meter": "simple",
+            "bpm": 120,
+            "picture": "p7.png"
+        },
+        {
+            "rhythm": [
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 1, "rest": false}
+            ],
+            "counts": 4,
+            "meter": "simple",
+            "bpm": 120,
+            "picture": "p8.png"
+        },
+        {
+            "rhythm": [
+                {"length": 1, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 2, "rest": false}
+            ],
+            "counts": 8,
+            "meter": "simple",
+            "bpm": 120,
+            "picture": "p9.png"
+        },
+        {
+            "rhythm": [
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": true},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 1, "rest": true},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 0.3333, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 0.5, "rest": false},
+                {"length": 1, "rest": false}
+            ],
+            "counts": 16,
+            "meter": "simple",
+            "bpm": 120,
+            "picture": "p10.png"
+        }
+    ]
+}

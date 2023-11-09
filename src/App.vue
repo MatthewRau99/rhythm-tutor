@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <RhythmTutor/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RhythmTutor from './components/RhythmTutor.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    RhythmTutor
   }
 }
 </script>
