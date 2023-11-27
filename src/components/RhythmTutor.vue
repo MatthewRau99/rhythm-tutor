@@ -62,13 +62,10 @@
 </template>
 
 <script>
-// Turn met on/off
-// Change met beats
-// Play correct rhythm
-// Change tempo
-// Change acceptable margins
-// Skip problem
-// Show/hide arrays
+import * as fbr from './../FeedbackRight'
+import * as fbm from './../FeedbackMany'
+import * as fbf from './../FeedbackFew'
+
 export default {
     data() {
         return {
@@ -242,6 +239,7 @@ export default {
                 for (const recorded of this.recordedPresses) {
                     this.connected.push(this.closest(recorded, this.expectedPresses))
                 }
+                
             }
         },
         calculateActual() {
@@ -281,30 +279,41 @@ export default {
         generateFeedback() {
             var feedback
             if (this.expectedPresses.length > this.recordedPresses.length) {
-                feedback = 'Too few notes played'
+                feedback = fbf.feedbackFew(
+                    this.problem, 
+                    this.recordedPresses,
+                    this.expectedPresses,
+                    this.connected,
+                    this.margins,
+                    this.played,
+                    this.acceptableMargin * (this.settings.marginMod / 100),
+                )
             }
             else if (this.expectedPresses.length < this.recordedPresses.length) {
-                feedback = 'Too many notes played'
-            }
-            else if (this.margins.some(note => (note > this.getAcceptableMargin() || note < -this.getAcceptableMargin()) )) {
-                const outsideMargin = this.margins.filter(note => (note > this.getAcceptableMargin() || note < -this.getAcceptableMargin()))
-                console.log(outsideMargin)
-                if (outsideMargin.every(note => (note < 200 && note > 200 ))) {
-                    feedback = "Your microtiming is off"
-                }
-                else if (outsideMargin.length == 1) {
-                    feedback = "You played one note in the wrong spot"
-                }
-                else {
-                    feedback = 'Note was too far off'
-                }
+                feedback = fbm.feedbackMany(
+                    this.problem, 
+                    this.recordedPresses,
+                    this.expectedPresses,
+                    this.connected,
+                    this.margins,
+                    this.played,
+                    this.acceptableMargin * (this.settings.marginMod / 100),
+                )
             }
             else {
-                feedback = 'Good Job!'
-                this.success = true
+                feedback = fbr.feedbackRight(
+                    this.problem, 
+                    this.recordedPresses,
+                    this.expectedPresses,
+                    this.connected,
+                    this.margins,
+                    this.played,
+                    this.acceptableMargin * (this.settings.marginMod / 100),
+                )
             }
 
-            this.feedback = feedback
+            this.feedback = feedback['feedback']
+            this.success = feedback['success']
         }
 
     },
