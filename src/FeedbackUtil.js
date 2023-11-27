@@ -18,6 +18,23 @@ export function compareNumbers(a, b) {
     return a - b;
 }
 
+export function hasDuplicates(array) {
+    return (new Set(array)).size !== array.length;
+}
+
+export function findDuplicates(array) {
+    let duplicates = []
+    for (var i = 0; i < array.length - 1; i++) {
+        if (array[i]==array[i+1]) {
+            if (!duplicates.includes(i)) {
+                duplicates.push(i)
+            }
+            duplicates.push(i+1)
+        }
+    }
+    return duplicates
+}
+
 export function getTimingString(number, acceptableMargin) {
     if (number > 1.5 * acceptableMargin) {
         return "early"

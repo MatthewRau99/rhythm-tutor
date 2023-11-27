@@ -1,5 +1,5 @@
 <template>
-    <h1>Welcome to Rhythm Tutor</h1>
+    <h1>Rhythm Tutor</h1>
     <div class="column">
         <img class="problemPic" ref="problemPic" src='./../../static/p1.png'/>
         <!-- <button @click="this.metronomeLoop(this.problem.counts + 4)">Start metronome</button> -->
@@ -57,7 +57,6 @@
         </div>
         <button @click="nextProblem">Skip Problem</button>
         <button @click="playAnswer">Play Answer</button>
-        
     </div>
 </template>
 
@@ -82,14 +81,14 @@ export default {
             startBeat: null,
             margins: [],
             feedback: null,
-            acceptableMargin: 100,
-            showSettings: true,
+            acceptableMargin: 115,
+            showSettings: false,
             settings: {
                 playMetronome: true,
                 metBeats: [true, true, true, true],
                 tempoMod: 0,
                 marginMod: 100,
-                showArrays: true,
+                showArrays: false,
             },
             success: false,
         }
@@ -107,7 +106,7 @@ export default {
                 if (this.metronomeOn) {
                     this.recordPress()
                 }   
-                else {
+                else if (this.success == false) {
                     this.metronomeOn = true
                     this.resetForRetry()
 
@@ -153,12 +152,13 @@ export default {
                 this.problem = this.problems[this.index]  
                 this.recordedPresses = []
                 this.$refs.problemPic.src = require( `./../../static/${this.problem.picture}`) 
+                this.feedback = ''
                 this.settings = {
                     playMetronome: true,
                     metBeats: [true, true, true, true],
                     tempoMod: 0,
                     marginMod: 100,
-                    showArrays: true,
+                    showArrays: false,
                 }
                 this.success = false
             }
@@ -249,7 +249,6 @@ export default {
                 possible[Math.round(this.beats[i] + ((this.beats[i+1] - this.beats[i]) * (1/3)))] = i+1.33
                 possible[Math.round((this.beats[i] + this.beats[i+1]) / 2)] = i+1.5 
                 possible[Math.round(this.beats[i] + ((this.beats[i+1] - this.beats[i]) * (2/3)))] = i+1.66
-
             }
             for (const recorded of this.recordedPresses) {
                 const actual = this.closest(recorded, Object.keys(possible))
@@ -284,9 +283,9 @@ export default {
                     this.recordedPresses,
                     this.expectedPresses,
                     this.connected,
-                    this.margins,
+                    // this.margins,
                     this.played,
-                    this.acceptableMargin * (this.settings.marginMod / 100),
+                    // this.acceptableMargin * (this.settings.marginMod / 100),
                 )
             }
             else if (this.expectedPresses.length < this.recordedPresses.length) {
@@ -295,9 +294,9 @@ export default {
                     this.recordedPresses,
                     this.expectedPresses,
                     this.connected,
-                    this.margins,
+                    // this.margins,
                     this.played,
-                    this.acceptableMargin * (this.settings.marginMod / 100),
+                    // this.acceptableMargin * (this.settings.marginMod / 100),
                 )
             }
             else {
