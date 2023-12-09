@@ -1,19 +1,7 @@
 import { findSingleNote, compareAbsNumbers, compareNumbers, getPlacement, getBeatName, getTimingString } from './FeedbackUtil'
 
 export function feedbackRight(problem, recorded, expected, connected, margins, played, acceptedMargin) {
-    // else if (this.margins.some(note => (note > this.getAcceptableMargin() || note < -this.getAcceptableMargin()) )) {
-    //     const outsideMargin = this.margins.filter(note => (note > this.getAcceptableMargin() || note < -this.getAcceptableMargin()))
-    //     console.log(outsideMargin)
-    //     if (outsideMargin.every(note => (note < 200 && note > 200 ))) {
-    //         feedback = "Your microtiming is off"
-    //     }
-    //     else if (outsideMargin.length == 1) {
-    //         feedback = "You played one note in the wrong spot"
-    //     }
-    //     else {
-    //         feedback = 'Note was too far off'
-    //     }
-    // }
+
     const badMargins = margins.filter(note => (note > acceptedMargin || note < -acceptedMargin))
     var success = false
     var feedback = ""
